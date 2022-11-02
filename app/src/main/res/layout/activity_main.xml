@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,8 +8,8 @@
     android:layout_margin="16dp"
     tools:context=".MainActivity">
 
-
     <TextView
+        android:id="@+id/tv_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Formulir Pendaftaran"
@@ -23,26 +23,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama Lengkap"
-        android:inputType="text" />
+        android:inputType="text"
+        android:layout_below="@id/tv_form"/>
 
     <EditText
         android:id="@+id/et_nomor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nomor Pendaftaran"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_below="@id/et_nama"/>
 
     <TextView
+        android:id="@+id/tv_daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Informasi Pendaftaran Dari :"
         android:textSize="17sp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/et_nomor"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@id/tv_daftar">
 
         <CheckBox
             android:id="@+id/cb_facebook"
@@ -68,10 +73,11 @@
         android:id="@+id/btn_daftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="DAFTAR" />
+        android:layout_marginBottom="255dp"
+        android:text="DAFTAR"
+        android:layout_alignParentBottom="true"/>
 
-</LinearLayout>
+</RelativeLayout>
 
 
 

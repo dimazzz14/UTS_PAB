@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nama,nomor;
-
+                int selectedID;
 
                 nama=et_nama.getText().toString();
                 nomor=et_nomor.getText().toString();
